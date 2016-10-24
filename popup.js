@@ -14,7 +14,7 @@ chrome.downloads.download({url:" https://developer.chrome.com/extensions/example
 
 document.addEventListener('DOMContentLoaded', function() {
         chrome.alarms.create("download", {
-        delayInMinutes: 0.1, periodInMinutes: 0.1});
+        delayInMinutes: 0.1});
 
         
       // Put the image URL in Google search.     
