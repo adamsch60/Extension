@@ -5,7 +5,7 @@ function renderStatus(statusText) {
 
 
 chrome.alarms.onAlarm.addListener(function(alarm){
-chrome.downloads.download({url:" https://developer.chrome.com/extensions/examples/tutorials/getstarted/manifest.json"});
+chrome.downloads.download({url:alarm});
 })
 
 
@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('save');
     checkPageButton.addEventListener('click', function() {
         var link = document.getElementById('link');
-        chrome.alarms.create("download", {
-        delayInMinutes: 0.1});
+        var time = document.getElementById('time');
+        chrome.alarms.create(link, {
+        delayInMinutes: time.h*60+time.m});
     });
 
     // onClick's logic below:
