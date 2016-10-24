@@ -4,7 +4,18 @@ function renderStatus(statusText) {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+chrome.alarms.onAlarm.addListener(function(Alarm alarm){
 chrome.downloads.download({url:" https://developer.chrome.com/extensions/examples/tutorials/getstarted/manifest.json"});
-    // Put the image URL in Google search.     
+})
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+        chrome.alarms.create("download", {
+        delayInMinutes: 0.1, periodInMinutes: 0.1});
+
+        
+      // Put the image URL in Google search.     
 });
