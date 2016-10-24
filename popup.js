@@ -15,15 +15,16 @@ chrome.downloads.download({url:" https://developer.chrome.com/extensions/example
 document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('save');
     checkPageButton.addEventListener('click', function() {
-      
-    });
-    var link = document.getElementById('link');
-    // onClick's logic below:
-    link.addEventListener('click', function() {
-    
+        var link = document.getElementById('link');
         chrome.alarms.create("download", {
         delayInMinutes: 0.1});
-});
+    });
+
+    // onClick's logic below:
+
+    
+
+
         
       // Put the image URL in Google search.     
 });
