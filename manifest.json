@@ -10,11 +10,11 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["eventPage.js"],
+    "scripts": ["popup.js"],
     "persistent": false
   },
   "permissions": [
-    "alarms"
+    "alarms" ,
    "downloads"
   ]
 }
