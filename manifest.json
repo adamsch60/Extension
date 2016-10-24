@@ -25,7 +25,7 @@
   "permissions": [
     "fileBrowserHandler"
     "alarms"
-   
+   "downloads"
   ],
   "icons": { "16": "icon16.png"},
 }
