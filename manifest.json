@@ -13,19 +13,8 @@
     "scripts": ["eventPage.js"],
     "persistent": false
   },
-  "file_browser_handlers": [
-          {
-            "id": "upload",
-            "default_title": "Declare downloads", // What the button will display
-            "file_filters": [
-              "filesystem:*.txt", 
-            ]
-          }
-        ],
   "permissions": [
-    "fileBrowserHandler"
     "alarms"
    "downloads"
-  ],
-  "icons": { "16": "icon16.png"},
+  ]
 }
