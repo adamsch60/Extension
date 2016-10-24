@@ -4,7 +4,7 @@ function renderStatus(statusText) {
 
 
 
-chrome.alarms.onAlarm.addListener(function(Alarm alarm){
+chrome.alarms.onAlarm.addListener(function(alarm){
 chrome.downloads.download({url:" https://developer.chrome.com/extensions/examples/tutorials/getstarted/manifest.json"});
 })
 
