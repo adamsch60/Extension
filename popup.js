@@ -13,9 +13,13 @@ chrome.downloads.download({url:" https://developer.chrome.com/extensions/example
 
 
 document.addEventListener('DOMContentLoaded', function() {
+   var link = document.getElementById('link');
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+    
         chrome.alarms.create("download", {
         delayInMinutes: 0.1});
-
+});
         
       // Put the image URL in Google search.     
 });
