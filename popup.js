@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     checkPageButton.addEventListener('click', function() {
         var link = document.getElementById('link').value;
         var time = document.getElementById('time').value;
-        chrome.alarms.create(link.time, {
-        delayInMinutes: time.time});
+        chrome.alarms.create(link, {
+        delayInMinutes: time});
     });
 
     // onClick's logic below:
