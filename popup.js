@@ -13,7 +13,11 @@ chrome.downloads.download({url:" https://developer.chrome.com/extensions/example
 
 
 document.addEventListener('DOMContentLoaded', function() {
-   var link = document.getElementById('link');
+    var checkPageButton = document.getElementById('save');
+    checkPageButton.addEventListener('click', function() {
+      
+    });
+    var link = document.getElementById('link');
     // onClick's logic below:
     link.addEventListener('click', function() {
     
