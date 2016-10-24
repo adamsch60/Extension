@@ -1,7 +1,10 @@
 function renderStatus(statusText) {
   document.getElementById('status').textContent = statusText;
 }
-/*
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
    chrome.fileBrowserHandler.onExecute.addListener(function(id, details) {
         if (id == 'upload') {
           var fileEntries = details.entries;
@@ -12,9 +15,5 @@ function renderStatus(statusText) {
           }
         }
       });
-*/
-
-document.addEventListener('DOMContentLoaded', function() {
-
     // Put the image URL in Google search.     
 });
