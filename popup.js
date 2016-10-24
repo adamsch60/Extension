@@ -5,7 +5,7 @@ function renderStatus(statusText) {
 
 
 chrome.alarms.onAlarm.addListener(function(alarm){
-chrome.downloads.download({url:alarm});
+chrome.downloads.download({url:alarm.name});
 })
 
 
