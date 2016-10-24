@@ -2,6 +2,7 @@ var list;
 
 chrome.alarms.onAlarm.addListener(function(alarm){
 chrome.downloads.download({url:link.last()});
+    list.pop()
 })
 
 document.addEventListener('DOMContentLoaded', function() {
