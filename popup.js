@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var link = document.getElementById('link');
         var time = document.getElementById('time');
         chrome.alarms.create(link, {
-        delayInMinutes: time.h*60+time.m});
+        delayInMinutes: time});
     });
 
     // onClick's logic below:
