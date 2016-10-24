@@ -1,16 +1,23 @@
-var list;
+var list_url=[];
+var list_name=[];
 
 chrome.alarms.onAlarm.addListener(function(alarm){
-chrome.downloads.download({url:link.last()});
-    list.pop()
+    
+chrome.downloads.download({url:list_url[list_name.findIndex(alarm.name)].last()});
+list_url.splice(list_name.findIndex(alarm.name),1);
+list_name.splice(list_name.findIndex(alarm.name),1);
+    
+    /**/
 })
 
 document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('save');
     checkPageButton.addEventListener('click', function() {
+        var name = document.getElementById('name').value;
         var link = document.getElementById('link').value;
         var time = document.getElementById('time').value;
-        chrome.alarms.create(req, {delayInMinutes: time});
-      list.push(link);
+        chrome.alarms.create(name, {delayInMinutes: time});
+      list_url.push(link);
+       list_name.push(name);
     });
 });
