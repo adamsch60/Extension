@@ -2,6 +2,7 @@ var list_url=[];
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.msg == "list_url") {
         sendResponse(list_url);
+        list_url.push(request.link);
         return true;
     }
 });
@@ -10,6 +11,7 @@ var list_name=[];
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.msg == "list_name") {
         sendResponse(list_name);
+        list_name.push(request.name);
         return true;
     }
 });
