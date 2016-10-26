@@ -11,6 +11,10 @@
   },
   "background": {
     "scripts": ["popup.js"],
+    "persistent": false
+  },
+   "background": {
+    "scripts": ["background.js"],
     "persistent": true
   },
   "permissions": [
