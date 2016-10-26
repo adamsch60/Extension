@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chrome.runtime.sendMessage({msg: "list_name"}, function(response) {
          llist_name=response;
         });
-        list_url.push(link);
-        list_name.push(name);
+        llist_url.push(link);
+        llist_name.push(name);
     });
 });
