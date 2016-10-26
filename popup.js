@@ -1,6 +1,3 @@
-var llist_url=[];
-var llist_name=[];
-
 
 document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('save');
@@ -9,13 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var link = document.getElementById('link').value;
         var time = Number(document.getElementById('time').value);
         chrome.alarms.create(name, {delayInMinutes: time});
-        chrome.runtime.sendMessage({msg: "list_url"}, function(response) {
-         llist_url=response;
+        chrome.runtime.sendMessage({msg: "list_url",link: link}, function(response) {
         });
-        chrome.runtime.sendMessage({msg: "list_name"}, function(response) {
-         llist_name=response;
+        chrome.runtime.sendMessage({msg: "list_name", name:name}, function(response) {
         });
-        llist_url.push(link);
-        llist_name.push(name);
     });
 });
