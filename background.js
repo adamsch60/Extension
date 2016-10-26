@@ -5,6 +5,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         return true;
     }
 });
+
 var list_name=[];
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.msg == "list_name") {
@@ -12,7 +13,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         return true;
     }
 });
-
 
 chrome.alarms.onAlarm.addListener(function(alarm){
   chrome.downloads.download({url:list_url[list_name.indexOf(alarm.name)]});
