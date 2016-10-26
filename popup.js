@@ -2,13 +2,9 @@ var list_url=[];
 var list_name=[];
 
 chrome.alarms.onAlarm.addListener(function(alarm){
-  console.log(list_name.indexOf(alarm.name)+','+alarm.name+','+list_name+','+list_url);
-  
-chrome.downloads.download({url:list_url[list_name.indexOf(alarm.name)]});
-list_url.splice(list_name.indexOf(alarm.name),1);
-list_name.splice(list_name.indexOf(alarm.name),1);
-    
-    /**/
+  chrome.downloads.download({url:list_url[list_name.indexOf(alarm.name)]});
+  list_url.splice(list_name.indexOf(alarm.name),1);
+  list_name.splice(list_name.indexOf(alarm.name),1);
 })
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -18,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var link = document.getElementById('link').value;
         var time = Number(document.getElementById('time').value);
         chrome.alarms.create(name, {delayInMinutes: time});
-      list_url.push(link);
-       list_name.push(name);
+        list_url.push(link);
+        list_name.push(name);
     });
 });
